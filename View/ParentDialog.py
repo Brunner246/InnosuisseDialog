@@ -2,6 +2,7 @@
 # pyuic5 -o main_window_ui.py ui/main_window.ui
 
 from PyQt5.QtWidgets import QDialog
+from PyQt5.QtCore import Qt
 
 import sys
 import utility_controller as uc
@@ -20,6 +21,8 @@ class ParentDialog(QDialog, Ui_Dialog):
     def __init__(self, model1: Page1Model, model2: Page2Model, parent=None):
         super().__init__(parent)
         self.setupUi(self)
+        self.set_window_flags()
+
         self.__model1 = model1
         self.__model2 = model2
         self.__page_1 = ChildPage1(self.__model1)
@@ -29,3 +32,11 @@ class ParentDialog(QDialog, Ui_Dialog):
     def __add_tab_widgets(self):
         self.tabWidget.addTab(self.__page_1, "Complex Text Object")
         self.tabWidget.addTab(self.__page_2, "Simple Text Object")
+
+    def set_window_flags(self):
+        flags = Qt.Dialog
+        flags |= Qt.WindowTitleHint
+        flags |= Qt.WindowSystemMenuHint
+        flags |= Qt.MSWindowsFixedSizeDialogHint
+        flags |= Qt.WindowCloseButtonHint
+        self.setWindowFlags(flags)
