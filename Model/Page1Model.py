@@ -11,14 +11,14 @@ PLUGIN_PATH = uc.get_plugin_path()
 
 sys.path.append(PLUGIN_PATH)
 
-from Controller.CwAPIController import CwAPIController
+from Controller.ComplexTextController import ComplexTextController
 from Utils.TextPositionData import create_text_position_data, create_text_option_data
 
 
 class Page1Model(QObject):
     timer_signal = pyqtSignal(float)
 
-    def __init__(self, controller: CwAPIController, parent=None):
+    def __init__(self, controller: ComplexTextController, parent=None):
         super().__init__(parent)
         self.__controller = controller
         self.__elapsed_time: float = 0
