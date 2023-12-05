@@ -7,7 +7,7 @@ import utility_controller as uc
 
 PLUGIN_PATH = uc.get_plugin_path()
 sys.path.append(PLUGIN_PATH)
-from TextPositionData import TextPositionData
+from Utils.TextPositionData import TextPositionData
 
 
 class CwAPIController:

@@ -2,7 +2,6 @@ import sys
 import time
 from typing import List
 
-import cadwork
 import element_controller as ec
 import utility_controller as uc
 from PyQt5.QtCore import QObject, pyqtSignal
@@ -11,8 +10,8 @@ PLUGIN_PATH = uc.get_plugin_path()
 
 sys.path.append(PLUGIN_PATH)
 
-from CwAPIController import CwAPIController
-from TextPositionData import create_text_position_data
+from Controller.CwAPIController import CwAPIController
+from Utils.TextPositionData import create_text_position_data
 
 
 class Page2Model(QObject):

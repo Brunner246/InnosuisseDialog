@@ -9,11 +9,11 @@ import utility_controller as uc
 PLUGIN_PATH = uc.get_plugin_path()
 sys.path.append(PLUGIN_PATH)
 
-from ParentDialog_ui import Ui_Dialog
-from ChildPage1 import ChildPage1
-from ChildPage2 import ChildPage2
-from Page1Model import Page1Model
-from Page2Model import Page2Model
+from View.ParentDialog_ui import Ui_Dialog
+from View.ChildPage1 import ChildPage1
+from View.ChildPage2 import ChildPage2
+from Model.Page1Model import Page1Model
+from Model.Page2Model import Page2Model
 
 
 class ParentDialog(QDialog, Ui_Dialog):

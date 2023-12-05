@@ -11,8 +11,8 @@ PLUGIN_PATH = uc.get_plugin_path()
 
 sys.path.append(PLUGIN_PATH)
 
-from CwAPIController import CwAPIController
-from TextPositionData import create_text_position_data, create_text_option_data
+from Controller.CwAPIController import CwAPIController
+from Utils.TextPositionData import create_text_position_data, create_text_option_data
 
 
 class Page1Model(QObject):

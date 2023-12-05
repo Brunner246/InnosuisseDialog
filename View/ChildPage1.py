@@ -1,7 +1,7 @@
 #  python -m PyQt5.uic.pyuic -x ./ChildPage1.ui -o ChildPage1.py
 # python -m PyQt5.uic.pyuic -x ./ChildPage1.ui -o ChildPage1_ui.py
 
-from PyQt5.QtWidgets import QWidget, QPushButton, QMessageBox
+from PyQt5.QtWidgets import QWidget
 
 import sys
 import cadwork
@@ -10,9 +10,9 @@ import utility_controller as uc
 PLUGIN_PATH = uc.get_plugin_path()
 sys.path.append(PLUGIN_PATH)
 
-from ChildPage1_ui import Ui_Form
-from Page1Model import Page1Model
-from Messagebox import show_info_box
+from View.ChildPage1_ui import Ui_Form
+from Model.Page1Model import Page1Model
+from Utils.Messagebox import show_info_box
 
 
 class ChildPage1(QWidget, Ui_Form):

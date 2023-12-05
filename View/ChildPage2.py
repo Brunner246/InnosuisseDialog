@@ -1,15 +1,14 @@
-from PyQt5.QtWidgets import QWidget, QPushButton, QMessageBox
+from PyQt5.QtWidgets import QWidget
 
 import sys
-import cadwork
 import utility_controller as uc
 
 PLUGIN_PATH = uc.get_plugin_path()
 sys.path.append(PLUGIN_PATH)
 
-from Page2Model import Page2Model
-from ChildPage2_ui import Ui_Form
-from Messagebox import show_info_box
+from Model.Page2Model import Page2Model
+from View.ChildPage2_ui import Ui_Form
+from Utils.Messagebox import show_info_box
 
 
 class ChildPage2(QWidget, Ui_Form):
