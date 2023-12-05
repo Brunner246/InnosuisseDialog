@@ -15,14 +15,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1,1">
-     <item>
-      <widget class="QPushButton" name="pbn_path">
-       <property name="text">
-        <string>print path</string>
-       </property>
-      </widget>
-     </item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
@@ -56,12 +49,9 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="cbx_geometry_type"/>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pbn_text_object">
+        <widget class="QPushButton" name="pbn_create">
          <property name="text">
-          <string>create text object</string>
+          <string>create</string>
          </property>
         </widget>
        </item>
@@ -81,11 +71,17 @@
       </layout>
      </item>
      <item>
-      <widget class="QPushButton" name="pbn_test_button">
-       <property name="text">
-        <string>PushButton</string>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
        </property>
-      </widget>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
      </item>
     </layout>
    </item>

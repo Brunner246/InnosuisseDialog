@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file './ChildPage1.ui'
+# Form implementation generated from reading ui file './ChildPage2.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.10
 #
@@ -19,9 +19,6 @@ class Ui_Form(object):
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.pbn_path = QtWidgets.QPushButton(Form)
-        self.pbn_path.setObjectName("pbn_path")
-        self.horizontalLayout.addWidget(self.pbn_path)
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
@@ -33,21 +30,14 @@ class Ui_Form(object):
         self.led_text = QtWidgets.QLineEdit(Form)
         self.led_text.setObjectName("led_text")
         self.verticalLayout.addWidget(self.led_text)
-        self.cbx_geometry_type = QtWidgets.QComboBox(Form)
-        self.cbx_geometry_type.setObjectName("cbx_geometry_type")
-        self.verticalLayout.addWidget(self.cbx_geometry_type)
-        self.pbn_text_object = QtWidgets.QPushButton(Form)
-        self.pbn_text_object.setObjectName("pbn_text_object")
-        self.verticalLayout.addWidget(self.pbn_text_object)
+        self.pbn_create = QtWidgets.QPushButton(Form)
+        self.pbn_create.setObjectName("pbn_create")
+        self.verticalLayout.addWidget(self.pbn_create)
         spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem1)
         self.horizontalLayout.addLayout(self.verticalLayout)
-        self.pbn_test_button = QtWidgets.QPushButton(Form)
-        self.pbn_test_button.setObjectName("pbn_test_button")
-        self.horizontalLayout.addWidget(self.pbn_test_button)
-        self.horizontalLayout.setStretch(0, 1)
-        self.horizontalLayout.setStretch(1, 1)
-        self.horizontalLayout.setStretch(2, 1)
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem2)
         self.verticalLayout_2.addLayout(self.horizontalLayout)
 
         self.retranslateUi(Form)
@@ -56,11 +46,9 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.pbn_path.setText(_translate("Form", "print path"))
         self.spb_count.setSuffix(_translate("Form", " items"))
         self.led_text.setPlaceholderText(_translate("Form", "write a text"))
-        self.pbn_text_object.setText(_translate("Form", "create text object"))
-        self.pbn_test_button.setText(_translate("Form", "PushButton"))
+        self.pbn_create.setText(_translate("Form", "create"))
 
 
 if __name__ == "__main__":

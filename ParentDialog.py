@@ -11,13 +11,21 @@ sys.path.append(PLUGIN_PATH)
 
 from ParentDialog_ui import Ui_Dialog
 from ChildPage1 import ChildPage1
+from ChildPage2 import ChildPage2
+from Page1Model import Page1Model
+from Page2Model import Page2Model
 
 
 class ParentDialog(QDialog, Ui_Dialog):
-    def __init__(self, parent=None):
+    def __init__(self, model1: Page1Model, model2: Page2Model, parent=None):
         super().__init__(parent)
         self.setupUi(self)
+        self.__model1 = model1
+        self.__model2 = model2
+        self.__page_1 = ChildPage1(self.__model1)
+        self.__page_2 = ChildPage2(self.__model2)
         self.__add_tab_widgets()
 
     def __add_tab_widgets(self):
-        self.tabWidget.addTab(ChildPage1(), "Child Page 1")
+        self.tabWidget.addTab(self.__page_1, "Complex Text Object")
+        self.tabWidget.addTab(self.__page_2, "Simple Text Object")
