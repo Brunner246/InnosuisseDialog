@@ -16,11 +16,11 @@ from View.ChildPage1 import ChildPage1
 from View.ChildPage2 import ChildPage2
 from Model.BaseModel import BaseModel
 
-
 class ParentDialog(QDialog, Ui_Dialog):
     def __init__(self, model: BaseModel, parent=None):
         super().__init__(parent)
         self.setupUi(self)
+        self.__load_stylesheet(uc.get_plugin_path() + r"\View\Stylesheet.css")
         self.set_window_flags()
         self.__model = model
         self.__page_1 = ChildPage1(self.__model.model1, self)
@@ -39,3 +39,10 @@ class ParentDialog(QDialog, Ui_Dialog):
         flags |= Qt.MSWindowsFixedSizeDialogHint
         flags |= Qt.WindowCloseButtonHint
         self.setWindowFlags(flags)
+
+    def __load_stylesheet(self, filename):
+        # Open the CSS file and read its contents
+        with open(filename, 'r') as file:
+            stylesheet = file.read()
+            print(stylesheet)
+            self.setStyleSheet(stylesheet)
