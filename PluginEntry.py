@@ -4,6 +4,7 @@ import sys
 import utility_controller as uc
 from PyQt5.QtWidgets import QWidget
 
+DEBUG = True
 PLUGIN_PATH = uc.get_plugin_path()
 
 sys.path.append(PLUGIN_PATH)
@@ -12,6 +13,11 @@ from Controller.SimpleTextController import SimpleTextController
 from Controller.ComplexTextController import ComplexTextController
 from Model.Page1Model import Page1Model
 from Model.Page2Model import Page2Model
+
+if DEBUG:
+    sys.path.append(r'D:\Python\PycharmProjects\InnosuisseDialogEnv\Lib\site-packages')
+    import pydevd_pycharm
+    pydevd_pycharm.settrace('localhost', port=3003, stdoutToServer=True, stderrToServer=True)
 
 if __name__ == "__main__":
     window_handle = uc.get_3d_hwnd()
