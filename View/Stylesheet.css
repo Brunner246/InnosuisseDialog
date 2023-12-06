@@ -11,6 +11,15 @@ QPushButton {
     font-size: 14px;
 }
 
+QPushButton#pbn_test_button {
+    background-color: #ea0e0e;
+    border: 2px solid #c4c425;
+    border-radius: 10px;
+    padding: 8px 16px;
+    color: white;
+    font-size: 14px;
+}
+
 QTabWidget {
     border: 2px solid #C4C4C3;
     border-radius: 10px;
